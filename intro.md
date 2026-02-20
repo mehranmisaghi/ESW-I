@@ -9,6 +9,11 @@ permalink: intro.md
 ## Slides da aula
 [em breve](link canva)
 
+## Primeiro Capítulo do livro
+Você pode acessar o primeiro capítulo para o estudo:
+[Capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+
+
 # Engenharia de Software: Fundamentos, Processos, Camadas e Contexto Atual
 O texto abaixo foi gerado com auxílio de IA
 
