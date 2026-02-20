@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz – Ética na Engenharia de Software</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #1f4037;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+.question h3 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #1f4037;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16352e;
+}
+
+.resultado {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.reprovado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff3cd;
+    border-left: 5px solid #ffc107;
+    border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Quiz – Ética na Engenharia de Software</h1>
+<div id="quiz"></div>
+<button onclick="corrigir()">Finalizar</button>
+<div id="resultado"></div>
+<div id="feedback"></div>
+</div>
+
+<script>
+
+const questoes = [
+{
+pergunta: "Segundo o Código ACM (2018), o profissional deve priorizar:",
+opcoes: ["Lucro organizacional", "Interesse público e bem-estar social", "Velocidade de entrega", "Redução de custos", "Automação total"],
+resposta: 1
+},
+{
+pergunta: "O princípio de evitar danos implica:",
+opcoes: ["Ignorar riscos menores", "Lançar sistemas rapidamente", "Prevenir falhas que impactem usuários", "Delegar responsabilidade", "Evitar testes demorados"],
+resposta: 2
+},
+{
+pergunta: "O IEEE Code of Ethics enfatiza:",
+opcoes: ["Neutralidade técnica absoluta", "Competência e responsabilidade profissional", "Redução de auditorias", "Foco exclusivo em hardware", "Ausência de conflito de interesse"],
+resposta: 1
+},
+{
+pergunta: "Um exemplo de violação ética é:",
+opcoes: ["Testes de segurança regulares", "Uso de criptografia", "Omissão de vulnerabilidade conhecida", "Auditoria de código", "Validação de requisitos"],
+resposta: 2
+},
+{
+pergunta: "A responsabilidade social envolve:",
+opcoes: ["Ignorar impactos algorítmicos", "Avaliar vieses em sistemas de IA", "Reduzir análise de dados", "Eliminar testes", "Priorizar marketing"],
+resposta: 1
+},
+{
+pergunta: "No SSDLC, o objetivo principal é:",
+opcoes: ["Diminuir documentação", "Integrar segurança ao ciclo de desenvolvimento", "Eliminar testes", "Aumentar tempo de deploy", "Evitar revisão de código"],
+resposta: 1
+},
+{
+pergunta: "Um ataque SQL Injection ocorre devido a:",
+opcoes: ["Criptografia forte", "Validação adequada de entrada", "Falta de sanitização de dados", "Uso de prepared statements", "Controle de acesso robusto"],
+resposta: 2
+},
+{
+pergunta: "Privacidade de dados exige:",
+opcoes: ["Compartilhamento irrestrito", "Armazenamento público", "Controle de acesso e criptografia", "Ausência de logs", "Ignorar legislação"],
+resposta: 2
+},
+{
+pergunta: "A competência profissional implica:",
+opcoes: ["Atualização contínua", "Resistência a mudanças", "Ignorar padrões técnicos", "Evitar auditorias", "Reduzir testes"],
+resposta: 0
+},
+{
+pergunta: "Sustentabilidade digital refere-se a:",
+opcoes: ["Uso ilimitado de recursos", "Otimização energética e eficiência computacional", "Eliminação de servidores", "Redução de código", "Desconsideração ambiental"],
+resposta: 1
+}
+];
+
+const quizDiv = document.getElementById("quiz");
+
+questoes.forEach((q, index) => {
+    const div = document.createElement("div");
+    div.classList.add("question");
+
+    div.innerHTML = `<h3>${index+1}. ${q.pergunta}</h3>`;
+
+    q.opcoes.forEach((opcao, i) => {
+        div.innerHTML += `
+        <label>
+        <input type="radio" name="q${index}" value="${i}">
+        ${opcao}
+        </label>
+        `;
+    });
+
+    quizDiv.appendChild(div);
+});
+
+function corrigir() {
+    let acertos = 0;
+    let feedbackHTML = "";
+
+    questoes.forEach((q, index) => {
+        const selecionado = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selecionado) {
+            if (parseInt(selecionado.value) === q.resposta) {
+                acertos++;
+            } else {
+                feedbackHTML += `
+                <div class="feedback">
+                <strong>Questão ${index+1}:</strong><br>
+                Resposta correta: ${q.opcoes[q.resposta]}
+                </div>
+                `;
+            }
+        }
+    });
+
+    const resultado = document.getElementById("resultado");
+    const feedback = document.getElementById("feedback");
+
+    const percentual = (acertos/questoes.length)*100;
+
+    if (percentual >= 70) {
+        resultado.className = "resultado aprovado";
+        resultado.textContent = `✅ Você acertou ${acertos}/10 (${percentual.toFixed(0)}%)`;
+    } else {
+        resultado.className = "resultado reprovado";
+        resultado.textContent = `⚠️ Você acertou ${acertos}/10 (${percentual.toFixed(0)}%). Revise o conteúdo.`;
+    }
+
+    feedback.innerHTML = feedbackHTML;
+}
+
+</script>
+
+</body>
+</html>
