@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz – Responsabilidades de Engenharai de Software</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #1e3c72;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f4f7fb;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162f59;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.reprovado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fff3cd;
+    border-left: 5px solid #ff9800;
+    border-radius: 6px;
+}
+
+.correta { color: green; font-weight: bold; }
+.errada { color: red; font-weight: bold; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Quiz – Engenharia de Software</h1>
+<div id="quiz"></div>
+<button onclick="corrigir()">Finalizar Avaliação</button>
+<div id="resultado"></div>
+<div id="detalhes"></div>
+</div>
+
+<script>
+
+function embaralhar(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+let questoes = embaralhar([
+
+// MÉDIAS (10)
+
+{
+pergunta: "A Engenharia de Software é definida como:",
+opcoes: [
+"Processo exclusivo de programação",
+"Disciplina que trata de todos os aspectos da produção de software",
+"Atividade limitada ao teste de sistemas",
+"Conjunto de ferramentas de hardware",
+"Técnica de manutenção corretiva"
+],
+resposta: 1
+},
+
+{
+pergunta: "Em sistemas de longa duração, os maiores custos geralmente estão relacionados a:",
+opcoes: [
+"Compra de hardware",
+"Desenvolvimento inicial",
+"Treinamento de usuários",
+"Manutenção do software",
+"Marketing do produto"
+],
+resposta: 3
+},
+
+{
+pergunta: "Produtos genéricos são caracterizados por:",
+opcoes: [
+"Serem feitos sob encomenda",
+"Terem especificação controlada pelo cliente",
+"Serem vendidos para diversos clientes",
+"Serem exclusivos para governo",
+"Não sofrerem manutenção"
+],
+resposta: 2
+},
+
+{
+pergunta: "Na especificação de sistemas sob encomenda:",
+opcoes: [
+"O desenvolvedor define tudo",
+"O cliente controla mudanças",
+"Não há requisitos definidos",
+"O mercado define o escopo",
+"A manutenção é desnecessária"
+],
+resposta: 1
+},
+
+{
+pergunta: "As principais atividades do processo de software incluem:",
+opcoes: [
+"Compra, venda, marketing e suporte",
+"Especificação, desenvolvimento, validação e evolução",
+"Planejamento financeiro e contábil",
+"Instalação, suporte e descarte",
+"Programação e documentação apenas"
+],
+resposta: 1
+},
+
+{
+pergunta: "Heterogeneidade no processo de software refere-se a:",
+opcoes: [
+"Sistemas simples e locais",
+"Sistemas distribuídos em diferentes dispositivos",
+"Padronização absoluta de hardware",
+"Redução de complexidade",
+"Eliminação da internet"
+],
+resposta: 1
+},
+
+{
+pergunta: "Aplicações stand-alone são:",
+opcoes: [
+"Baseadas exclusivamente na nuvem",
+"Executadas localmente sem necessidade de rede",
+"Dependentes de web services",
+"Sistemas embarcados industriais",
+"Sistemas distribuídos globais"
+],
+resposta: 1
+},
+
+{
+pergunta: "Um atributo essencial do software é:",
+opcoes: [
+"Popularidade",
+"Manutenibilidade",
+"Quantidade de código",
+"Complexidade",
+"Baixo custo inicial"
+],
+resposta: 1
+},
+
+{
+pergunta: "No contexto da Internet, o reuso de software é:",
+opcoes: [
+"Proibido",
+"Irrelevante",
+"Abordagem dominante",
+"Substituído por hardware",
+"Desnecessário"
+],
+resposta: 2
+},
+
+{
+pergunta: "Computação em nuvem caracteriza-se por:",
+opcoes: [
+"Compra definitiva de software",
+"Execução local apenas",
+"Pagamento conforme uso",
+"Eliminação da internet",
+"Ausência de serviços remotos"
+],
+resposta: 2
+},
+
+// DIFÍCEIS (5)
+
+{
+pergunta: "A maior dificuldade na engenharia de software está relacionada a:",
+opcoes: [
+"Programação básica",
+"Gerenciamento de requisitos e mudanças",
+"Compra de computadores",
+"Instalação física",
+"Treinamento inicial"
+],
+resposta: 1
+},
+
+{
+pergunta: "A diversidade na Engenharia de Software implica que:",
+opcoes: [
+"Existe um método universal",
+"Cada sistema exige técnicas apropriadas",
+"Todos os sistemas são iguais",
+"Apenas IA é relevante",
+"Testes não são necessários"
+],
+resposta: 1
+},
+
+{
+pergunta: "A confiança no software é fundamental porque:",
+opcoes: [
+"Software não impacta a sociedade",
+"Ele está entrelaçado com todos os aspectos da vida",
+"Não depende de segurança",
+"É apenas ferramenta auxiliar",
+"Substitui totalmente humanos"
+],
+resposta: 1
+},
+
+{
+pergunta: "Em sistemas web modernos, é impraticável especificar todos os requisitos antecipadamente porque:",
+opcoes: [
+"Clientes não participam",
+"O ambiente de negócio muda rapidamente",
+"A internet é estática",
+"O software não evolui",
+"Não há usuários finais"
+],
+resposta: 1
+},
+
+{
+pergunta: "A reutilização de software é recomendada porque:",
+opcoes: [
+"Aumenta riscos",
+"Reduz custo e tempo de desenvolvimento",
+"Elimina testes",
+"Evita documentação",
+"Dispensa planejamento"
+],
+resposta: 1
+}
+
+]);
+
+const quizDiv = document.getElementById("quiz");
+
+questoes.forEach((q, index) => {
+
+    const div = document.createElement("div");
+    div.classList.add("question");
+
+    div.innerHTML = `<h3>${index+1}. ${q.pergunta}</h3>`;
+
+    let alternativas = embaralhar(
+        q.opcoes.map((opcao, i) => ({
+            texto: opcao,
+            correta: i === q.resposta
+        }))
+    );
+
+    q.alternativas = alternativas;
+
+    alternativas.forEach((alt, i) => {
+        div.innerHTML += `
+        <label>
+        <input type="radio" name="q${index}" value="${i}">
+        ${alt.texto}
+        </label>
+        `;
+    });
+
+    quizDiv.appendChild(div);
+});
+
+function corrigir() {
+
+    let acertos = 0;
+    let detalhesHTML = "";
+
+    questoes.forEach((q, index) => {
+
+        const selecionado = document.querySelector(`input[name="q${index}"]:checked`);
+
+        if (selecionado) {
+
+            const valor = parseInt(selecionado.value);
+            const marcada = q.alternativas[valor];
+
+            if (marcada.correta) {
+                acertos++;
+            } else {
+
+                const correta = q.alternativas.find(a => a.correta);
+
+                detalhesHTML += `
+                <div class="feedback">
+                <strong>Questão ${index+1}</strong><br>
+                <span class="errada">Sua resposta:</span> ${marcada.texto}<br>
+                <span class="correta">Resposta correta:</span> ${correta.texto}
+                </div>
+                `;
+            }
+        }
+    });
+
+    const percentual = (acertos/questoes.length)*100;
+    const resultado = document.getElementById("resultado");
+    const detalhes = document.getElementById("detalhes");
+
+    if (percentual >= 70) {
+        resultado.className = "resultado aprovado";
+        resultado.textContent = `✅ Você acertou ${acertos}/15 (${percentual.toFixed(0)}%)`;
+    } else {
+        resultado.className = "resultado reprovado";
+        resultado.textContent = `⚠️ Você acertou ${acertos}/15 (${percentual.toFixed(0)}%). Revise os erros abaixo.`;
+    }
+
+    detalhes.innerHTML = detalhesHTML;
+}
+
+</script>
+
+</body>
+</html>
