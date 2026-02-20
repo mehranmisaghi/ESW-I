@@ -6,14 +6,6 @@ permalink: intro.md
 
 # Engenharia de Software - Semana 1
 
-## Slides da aula
-[em breve](link canva)
-
-## Primeiro Capítulo do livro
-Você pode acessar o primeiro capítulo para o estudo:
-[Capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
-
-
 # Engenharia de Software: Fundamentos, Processos, Camadas e Contexto Atual
 O texto abaixo foi gerado com auxílio de IA
 
@@ -192,3 +184,10 @@ SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
 ## [Teste os seus conhecimentos](https://mehranmisaghi.github.io/ESW-I/quiz-papel.html)
 
+## Slides da aula
+[em breve](link canva)
+
+## Primeiro Capítulo do livro
+Você pode acessar o primeiro capítulo para o estudo:
+[Capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+## **Não esqueça de estudar o primeiro capítulo e refletir sobre as perguntas para próxima aula**
