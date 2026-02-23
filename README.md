@@ -9,7 +9,6 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 
 ## Metodologia
 - Aulas expositiva dialogadas
-
 - Trabalhos e Exercícios
 - Aulas invertidas (trazer um caso real e chegar no problema raíz e discutir os conceitos)
 - Estudos de casos reais
