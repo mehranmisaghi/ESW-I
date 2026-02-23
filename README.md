@@ -6,6 +6,18 @@ Repositório destinado para disciplina de Engenharia de Software I
 
 ## Ementa da Disciplina
 Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvimento de software. Manutenção de software. Metodologias, técnicas e ferramentas na engenharia de software. 
+
+## Metodologia
+- Aulas expositiva dialogadas
+- Trabalhos e Exercícios
+- Aulas invertidas (trazer um caso real e chegar no problema raíz e discutir os conceitos)
+- Estudos de casos reais
+
+## Avaliação 
+- Exercícios e revisão de conceitos apreendidos com peso 2
+- Duas Provas com peso 2,5 cada prova
+- Seminários com peso 3.
+
 ## Cronograma Sugerido
 [Aula Inaugural (24/02/2026 - 24/02/2026)](intro.md)
   - Ementa, metodologia, formas de avaliação
