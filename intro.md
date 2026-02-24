@@ -6,6 +6,9 @@ permalink: intro.md
 
 # Engenharia de Software - Semana 1
 
+## Slides da aula
+[Primeira Semana](https://www.canva.com/design/DAHB4ZAigxc/lgjWJyY86zBlLOh0KbjfwA/edit?utm_content=DAHB4ZAigxc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 # Engenharia de Software: Fundamentos, Processos, Camadas e Contexto Atual
 O texto abaixo foi gerado com auxílio de IA
 
