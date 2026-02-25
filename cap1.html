@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz – Capítulo 1 (Engenharia de Software)</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#111a33;
+      --text:#e9eefc;
+      --muted:#b9c3e6;
+      --accent:#7aa2ff;
+      --ok:#20c997;
+      --bad:#ff6b6b;
+      --border:rgba(255,255,255,.12);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;
+      background:linear-gradient(180deg, var(--bg), #070a14);
+      color:var(--text);
+      line-height:1.35;
+    }
+    header{
+      padding:24px 16px 12px;
+      max-width:980px;
+      margin:0 auto;
+    }
+    h1{ margin:0 0 6px; font-size:20px; }
+    p{ margin:6px 0; color:var(--muted); }
+
+    .toolbar{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      padding:12px 16px 18px;
+      max-width:980px;
+      margin:0 auto;
+    }
+    .toolbar .group{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:10px 12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .toolbar button{
+      background:#0c1430;
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:8px 10px;
+      font-size:14px;
+      cursor:pointer;
+    }
+    .toolbar button.primary{
+      border-color:rgba(122,162,255,.5);
+      background:rgba(122,162,255,.12);
+    }
+
+    main{
+      padding:0 16px 40px;
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .question{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px 14px 12px;
+      margin:12px 0;
+    }
+    .qhead{
+      display:flex;
+      gap:10px;
+      align-items:baseline;
+      justify-content:space-between;
+      margin-bottom:10px;
+    }
+    .qtitle{
+      margin:0;
+      font-weight:650;
+      font-size:15px;
+    }
+    .badge{
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .badge.facil{ border-color:rgba(122,162,255,.35); color:#cfe0ff; }
+    .badge.medio{ border-color:rgba(255,206,86,.35); color:#ffe9b3; }
+    .badge.dificil{ border-color:rgba(255,107,107,.35); color:#ffd0d0; }
+
+    fieldset{
+      border:0;
+      padding:0;
+      margin:0;
+      min-width:0;
+    }
+    legend{
+      position:absolute;
+      left:-9999px;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .opt{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;
+      margin:8px 0;
+      background:rgba(0,0,0,.12);
+    }
+    .opt input{ margin-top:2px; }
+    .opt span{
+      display:inline-block;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .feedback{
+      margin-top:10px;
+      font-size:13px;
+      display:none; /* só aparece depois de corrigir */
+      border-top:1px dashed rgba(255,255,255,.14);
+      padding-top:10px;
+      color:var(--muted);
+    }
+    .feedback strong{ color:var(--text); }
+
+    .question.correct{
+      border-color:rgba(32,201,151,.45);
+      box-shadow:0 0 0 1px rgba(32,201,151,.12) inset;
+    }
+    .question.incorrect{
+      border-color:rgba(255,107,107,.45);
+      box-shadow:0 0 0 1px rgba(255,107,107,.12) inset;
+    }
+
+    .result{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px 14px;
+      margin:12px 0 16px;
+      display:none;
+    }
+    .result h2{ margin:0 0 6px; font-size:16px; }
+    .result .grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .stat{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.10);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .stat b{ color:var(--text); font-size:14px; }
+
+    footer{
+      max-width:980px;
+      margin:0 auto;
+      padding:0 16px 28px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    @media (max-width:720px){
+      .result .grid{ grid-template-columns:1fr; }
+      .qhead{ flex-direction:column; align-items:flex-start; gap:6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Capítulo 1 – Questões objetivas (A–E)</h1>
+  </header>
+
+  <div class="toolbar" role="region" aria-label="Controles do quiz">
+    <div class="group">
+      <button class="primary" id="gradeBtn" type="button">Corrigir</button>
+      <button id="resetBtn" type="button">Limpar respostas</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="result" id="resultBox" aria-live="polite">
+      <h2>Resultado</h2>
+      <div id="resultText" class="stat"></div>
+      <div class="grid">
+        <div class="stat" id="statFacil"></div>
+        <div class="stat" id="statMedio"></div>
+        <div class="stat" id="statDificil"></div>
+        <div class="stat" id="statBranco"></div>
+      </div>
+    </section>
+
+    <!-- Q1 -->
+    <article class="question" data-difficulty="facil" data-answer="B" id="q1">
+      <div class="qhead">
+        <p class="qtitle">1) No texto, engenharia de software é apresentada como:</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 1</legend>
+        <label class="opt"><input type="radio" name="q1" value="A" /><span>A) Um conjunto de linguagens de programação para sistemas críticos</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B" /><span>B) Um processo, um conjunto de métodos (práticas) e uma série de ferramentas para desenvolver software de altíssima qualidade</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C" /><span>C) Um tipo de hardware voltado a acelerar algoritmos</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D" /><span>D) Uma técnica exclusiva para empresas de TI e aeroespaciais</span></label>
+        <label class="opt"><input type="radio" name="q1" value="E" /><span>E) Um modelo matemático para eliminar todos os defeitos de um software</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q2 -->
+    <article class="question" data-difficulty="facil" data-answer="C" id="q2">
+      <div class="qhead">
+        <p class="qtitle">2) Segundo a descrição do livro-texto citada, software consiste em:</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 2</legend>
+        <label class="opt"><input type="radio" name="q2" value="A" /><span>A) Apenas instruções executáveis, sem dados nem documentação</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B" /><span>B) Hardware, rede e sistemas operacionais</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C" /><span>C) Instruções, estruturas de dados e informação descritiva (documentação) sobre operação/uso</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D" /><span>D) Requisitos de negócio, planos e cronogramas</span></label>
+        <label class="opt"><input type="radio" name="q2" value="E" /><span>E) Interfaces gráficas e bancos de dados somente</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q3 -->
+    <article class="question" data-difficulty="facil" data-answer="B" id="q3">
+      <div class="qhead">
+        <p class="qtitle">3) Qual é a característica fundamental que torna o software diferente do hardware, segundo o texto?</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 3</legend>
+        <label class="opt"><input type="radio" name="q3" value="A" /><span>A) O software não pode falhar</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B" /><span>B) O software não “se desgasta”</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C" /><span>C) O software é sempre mais barato que hardware</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D" /><span>D) O software não precisa de manutenção</span></label>
+        <label class="opt"><input type="radio" name="q3" value="E" /><span>E) O software não tem defeitos de projeto</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q4 -->
+    <article class="question" data-difficulty="facil" data-answer="C" id="q4">
+      <div class="qhead">
+        <p class="qtitle">4) Quantas atividades metodológicas genéricas a metodologia de processo descrita no texto compreende?</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 4</legend>
+        <label class="opt"><input type="radio" name="q4" value="A" /><span>A) 3</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B" /><span>B) 4</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C" /><span>C) 5</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D" /><span>D) 6</span></label>
+        <label class="opt"><input type="radio" name="q4" value="E" /><span>E) 7</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q5 -->
+    <article class="question" data-difficulty="facil" data-answer="B" id="q5">
+      <div class="qhead">
+        <p class="qtitle">5) Qual alternativa lista corretamente as cinco atividades metodológicas genéricas do processo de software apresentadas?</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 5</legend>
+        <label class="opt"><input type="radio" name="q5" value="A" /><span>A) Análise, codificação, compilação, depuração e implantação</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B" /><span>B) Comunicação, planejamento, modelagem, construção e entrega</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C" /><span>C) Requisitos, arquitetura, banco de dados, interface e testes</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D" /><span>D) Prototipação, refatoração, versionamento, integração e deploy</span></label>
+        <label class="opt"><input type="radio" name="q5" value="E" /><span>E) Ideação, orçamento, contratação, execução e auditoria</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q6 -->
+    <article class="question" data-difficulty="facil" data-answer="B" id="q6">
+      <div class="qhead">
+        <p class="qtitle">6) O princípio KISS, citado no texto, significa:</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 6</legend>
+        <label class="opt"><input type="radio" name="q6" value="A" /><span>A) Priorizar ao máximo a complexidade para ganhar desempenho</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B" /><span>B) “Keep It Simple”: manter o projeto o mais simples possível, sem ser simplista</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C" /><span>C) Remover documentação para aumentar agilidade</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D" /><span>D) Copiar soluções prontas sem adaptação</span></label>
+        <label class="opt"><input type="radio" name="q6" value="E" /><span>E) Evitar testes para reduzir custos</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q7 -->
+    <article class="question" data-difficulty="facil" data-answer="B" id="q7">
+      <div class="qhead">
+        <p class="qtitle">7) No trecho do desenvolvedor de games, um desafio típico citado é:</p>
+        <span class="badge facil">Fácil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 7</legend>
+        <label class="opt"><input type="radio" name="q7" value="A" /><span>A) Criar hardware novo para cada versão do jogo</span></label>
+        <label class="opt"><input type="radio" name="q7" value="B" /><span>B) Traduzir requisitos fornecidos pelos “criativos” em requisitos técnicos</span></label>
+        <label class="opt"><input type="radio" name="q7" value="C" /><span>C) Eliminar completamente mudanças de requisitos após o início do projeto</span></label>
+        <label class="opt"><input type="radio" name="q7" value="D" /><span>D) Proibir construções diárias (builds) para reduzir instabilidade</span></label>
+        <label class="opt"><input type="radio" name="q7" value="E" /><span>E) Evitar qualquer forma de disciplina de desenvolvimento</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q8 -->
+    <article class="question" data-difficulty="medio" data-answer="B" id="q8">
+      <div class="qhead">
+        <p class="qtitle">8) Segundo o texto, o software tem um duplo papel. Qual alternativa expressa corretamente esse ponto?</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 8</legend>
+        <label class="opt"><input type="radio" name="q8" value="A" /><span>A) Ele é um hardware e um firmware</span></label>
+        <label class="opt"><input type="radio" name="q8" value="B" /><span>B) Ele é um produto e o veículo para distribuir um produto</span></label>
+        <label class="opt"><input type="radio" name="q8" value="C" /><span>C) Ele é um processo e uma ferramenta</span></label>
+        <label class="opt"><input type="radio" name="q8" value="D" /><span>D) Ele é um método e um padrão</span></label>
+        <label class="opt"><input type="radio" name="q8" value="E" /><span>E) Ele é uma linguagem e um compilador</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q9 -->
+    <article class="question" data-difficulty="medio" data-answer="B" id="q9">
+      <div class="qhead">
+        <p class="qtitle">9) No texto, “software” é descrito como um transformador de informações. Qual conjunto de verbos aparece como exemplos desse papel?</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 9</legend>
+        <label class="opt"><input type="radio" name="q9" value="A" /><span>A) Pintando, esculpindo, imprimindo, fundindo</span></label>
+        <label class="opt"><input type="radio" name="q9" value="B" /><span>B) Produzindo, gerenciando, adquirindo, modificando, exibindo ou transmitindo</span></label>
+        <label class="opt"><input type="radio" name="q9" value="C" /><span>C) Soldando, furando, montando, lixando</span></label>
+        <label class="opt"><input type="radio" name="q9" value="D" /><span>D) Pesando, medindo, calibrando, regulando</span></label>
+        <label class="opt"><input type="radio" name="q9" value="E" /><span>E) Digitando, clicando, arrastando, soltando</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q10 -->
+    <article class="question" data-difficulty="medio" data-answer="C" id="q10">
+      <div class="qhead">
+        <p class="qtitle">10) O texto afirma “software não se desgasta. Mas deteriora!”. A deterioração ocorre principalmente porque:</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 10</legend>
+        <label class="opt"><input type="radio" name="q10" value="A" /><span>A) Poeira e vibração afetam diretamente o código</span></label>
+        <label class="opt"><input type="radio" name="q10" value="B" /><span>B) Temperaturas extremas apagam arquivos automaticamente</span></label>
+        <label class="opt"><input type="radio" name="q10" value="C" /><span>C) Mudanças ao longo da vida do software podem introduzir erros e aumentar a taxa de defeitos</span></label>
+        <label class="opt"><input type="radio" name="q10" value="D" /><span>D) O hardware envelhece e força a curva do software a subir inevitavelmente</span></label>
+        <label class="opt"><input type="radio" name="q10" value="E" /><span>E) O compilador reduz a qualidade do software a cada execução</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q11 -->
+    <article class="question" data-difficulty="medio" data-answer="B" id="q11">
+      <div class="qhead">
+        <p class="qtitle">11) Qual alternativa melhor caracteriza “software legado”, conforme o texto?</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 11</legend>
+        <label class="opt"><input type="radio" name="q11" value="A" /><span>A) Software necessariamente sem defeitos e sem necessidade de mudança</span></label>
+        <label class="opt"><input type="radio" name="q11" value="B" /><span>B) Sistemas desenvolvidos décadas atrás e continuamente modificados para mudanças de negócio e plataformas, frequentemente caros e arriscados de evoluir</span></label>
+        <label class="opt"><input type="radio" name="q11" value="C" /><span>C) Apenas sistemas operacionais antigos como Linux</span></label>
+        <label class="opt"><input type="radio" name="q11" value="D" /><span>D) Sistemas que nunca foram usados em produção</span></label>
+        <label class="opt"><input type="radio" name="q11" value="E" /><span>E) Software de inteligência artificial voltado a jogos</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q12 -->
+    <article class="question" data-difficulty="medio" data-answer="C" id="q12">
+      <div class="qhead">
+        <p class="qtitle">12) Diante de um sistema legado que atende às necessidades e funciona de forma confiável, o texto sugere que a resposta adequada, em geral, é:</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 12</legend>
+        <label class="opt"><input type="radio" name="q12" value="A" /><span>A) Reescrever imediatamente todo o sistema do zero</span></label>
+        <label class="opt"><input type="radio" name="q12" value="B" /><span>B) Migrar para outra linguagem sem análise</span></label>
+        <label class="opt"><input type="radio" name="q12" value="C" /><span>C) Não fazer nada, até que seja necessária uma modificação significativa</span></label>
+        <label class="opt"><input type="radio" name="q12" value="D" /><span>D) Descartar o sistema e cortar suporte aos usuários</span></label>
+        <label class="opt"><input type="radio" name="q12" value="E" /><span>E) Adicionar funcionalidades aleatórias para “modernizar”</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q13 -->
+    <article class="question" data-difficulty="medio" data-answer="B" id="q13">
+      <div class="qhead">
+        <p class="qtitle">13) Na definição do IEEE citada, engenharia de software é:</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 13</legend>
+        <label class="opt"><input type="radio" name="q13" value="A" /><span>A) Um conjunto de truques de codificação para entregar mais rápido</span></label>
+        <label class="opt"><input type="radio" name="q13" value="B" /><span>B) A aplicação de uma abordagem sistemática, disciplinada e quantificável no desenvolvimento, operação e manutenção de software</span></label>
+        <label class="opt"><input type="radio" name="q13" value="C" /><span>C) O uso obrigatório de uma linguagem formal para especificar requisitos</span></label>
+        <label class="opt"><input type="radio" name="q13" value="D" /><span>D) Um sinônimo de programação</span></label>
+        <label class="opt"><input type="radio" name="q13" value="E" /><span>E) Uma técnica exclusiva de gestão da qualidade total</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q14 -->
+    <article class="question" data-difficulty="medio" data-answer="D" id="q14">
+      <div class="qhead">
+        <p class="qtitle">14) Segundo o texto, qual é a “pedra fundamental” que sustenta a engenharia de software (na tecnologia em camadas)?</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 14</legend>
+        <label class="opt"><input type="radio" name="q14" value="A" /><span>A) Ferramentas</span></label>
+        <label class="opt"><input type="radio" name="q14" value="B" /><span>B) Métodos</span></label>
+        <label class="opt"><input type="radio" name="q14" value="C" /><span>C) Linguagens de programação</span></label>
+        <label class="opt"><input type="radio" name="q14" value="D" /><span>D) Foco na qualidade</span></label>
+        <label class="opt"><input type="radio" name="q14" value="E" /><span>E) Velocidade de entrega</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q15 -->
+    <article class="question" data-difficulty="medio" data-answer="C" id="q15">
+      <div class="qhead">
+        <p class="qtitle">15) No texto, “processo” na engenharia de software NÃO é:</p>
+        <span class="badge medio">Médio</span>
+      </div>
+      <fieldset>
+        <legend>Questão 15</legend>
+        <label class="opt"><input type="radio" name="q15" value="A" /><span>A) Um conjunto de atividades, ações e tarefas</span></label>
+        <label class="opt"><input type="radio" name="q15" value="B" /><span>B) Uma abordagem adaptável para selecionar ações e tarefas apropriadas</span></label>
+        <label class="opt"><input type="radio" name="q15" value="C" /><span>C) Uma prescrição rígida de como desenvolver software em todos os casos</span></label>
+        <label class="opt"><input type="radio" name="q15" value="D" /><span>D) Um meio de entregar software dentro do prazo e com qualidade suficiente</span></label>
+        <label class="opt"><input type="radio" name="q15" value="E" /><span>E) A base para controle do gerenciamento de projetos e aplicação de métodos</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q16 -->
+    <article class="question" data-difficulty="dificil" data-answer="B" id="q16">
+      <div class="qhead">
+        <p class="qtitle">16) Sobre os conceitos de atividade, ação e tarefa no processo, qual alternativa está correta?</p>
+        <span class="badge dificil">Difícil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 16</legend>
+        <label class="opt"><input type="radio" name="q16" value="A" /><span>A) Atividade e tarefa são sinônimos; ação é opcional</span></label>
+        <label class="opt"><input type="radio" name="q16" value="B" /><span>B) Atividade busca um objetivo amplo; ação envolve um conjunto de tarefas que resulta em um artefato fundamental; tarefa foca um objetivo pequeno e produz resultado tangível</span></label>
+        <label class="opt"><input type="radio" name="q16" value="C" /><span>C) Ação é sempre mais ampla que atividade e não gera artefatos</span></label>
+        <label class="opt"><input type="radio" name="q16" value="D" /><span>D) Tarefa é um conjunto de atividades e sempre inclui entrega ao cliente</span></label>
+        <label class="opt"><input type="radio" name="q16" value="E" /><span>E) Atividade só existe em projetos grandes; tarefa só em projetos pequenos</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q17 -->
+    <article class="question" data-difficulty="dificil" data-answer="C" id="q17">
+      <div class="qhead">
+        <p class="qtitle">17) Segundo o texto, por que “não existem peças de reposição de software” e o que isso implica?</p>
+        <span class="badge dificil">Difícil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 17</legend>
+        <label class="opt"><input type="radio" name="q17" value="A" /><span>A) Porque software é físico; implica troca de componentes danificados</span></label>
+        <label class="opt"><input type="radio" name="q17" value="B" /><span>B) Porque todo defeito é causado por desgaste ambiental; implica lubrificação periódica</span></label>
+        <label class="opt"><input type="radio" name="q17" value="C" /><span>C) Porque defeito de software indica erro no projeto ou no processo de tradução do projeto em código executável; implica manutenção mais complexa do que a de hardware</span></label>
+        <label class="opt"><input type="radio" name="q17" value="D" /><span>D) Porque o usuário troca o software quando quer; implica manutenção desnecessária</span></label>
+        <label class="opt"><input type="radio" name="q17" value="E" /><span>E) Porque defeitos são sempre do compilador; implica atualizar o compilador resolve</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q18 -->
+    <article class="question" data-difficulty="dificil" data-answer="B" id="q18">
+      <div class="qhead">
+        <p class="qtitle">18) Entre as atividades de apoio (umbrella activities) listadas no texto, qual alternativa contém apenas itens que aparecem na lista?</p>
+        <span class="badge dificil">Difícil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 18</legend>
+        <label class="opt"><input type="radio" name="q18" value="A" /><span>A) Gestão de pessoas, marketing, vendas e finanças</span></label>
+        <label class="opt"><input type="radio" name="q18" value="B" /><span>B) Administração de riscos, garantia da qualidade de software, revisões técnicas e gerência de configuração de software</span></label>
+        <label class="opt"><input type="radio" name="q18" value="C" /><span>C) Programação orientada a objetos, padrões de projeto, refatoração e design system</span></label>
+        <label class="opt"><input type="radio" name="q18" value="D" /><span>D) Criptografia, redes neurais, mineração de dados e computação quântica</span></label>
+        <label class="opt"><input type="radio" name="q18" value="E" /><span>E) Prototipação, design thinking, brainstorming e canvas</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q19 -->
+    <article class="question" data-difficulty="dificil" data-answer="B" id="q19">
+      <div class="qhead">
+        <p class="qtitle">19) O texto apresenta a essência da prática (adaptada de Polya) com quatro etapas. Qual alternativa faz o mapeamento correto das etapas para exemplos citados?</p>
+        <span class="badge dificil">Difícil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 19</legend>
+        <label class="opt"><input type="radio" name="q19" value="A" /><span>A) Compreender (testes), Planejar (codificação), Executar (comunicação), Examinar (planejamento)</span></label>
+        <label class="opt"><input type="radio" name="q19" value="B" /><span>B) Compreender (comunicação e análise), Planejar (modelagem e projeto), Executar (geração de código), Examinar (testes e garantia da qualidade)</span></label>
+        <label class="opt"><input type="radio" name="q19" value="C" /><span>C) Compreender (entrega), Planejar (operações), Executar (manutenção), Examinar (marketing)</span></label>
+        <label class="opt"><input type="radio" name="q19" value="D" /><span>D) Compreender (arquitetura), Planejar (deploy), Executar (requisitos), Examinar (infraestrutura)</span></label>
+        <label class="opt"><input type="radio" name="q19" value="E" /><span>E) Compreender (depuração), Planejar (compilação), Executar (documentação), Examinar (reuniões)</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+    <!-- Q20 -->
+    <article class="question" data-difficulty="dificil" data-answer="C" id="q20">
+      <div class="qhead">
+        <p class="qtitle">20) No princípio “A razão de existir” (Hooker), o critério central para decisões de requisitos/funcionalidades/plataforma/processo é:</p>
+        <span class="badge dificil">Difícil</span>
+      </div>
+      <fieldset>
+        <legend>Questão 20</legend>
+        <label class="opt"><input type="radio" name="q20" value="A" /><span>A) Maximizar a quantidade de funcionalidades, independentemente de valor</span></label>
+        <label class="opt"><input type="radio" name="q20" value="B" /><span>B) Seguir a tecnologia mais nova do mercado</span></label>
+        <label class="opt"><input type="radio" name="q20" value="C" /><span>C) Agregar valor real aos usuários do sistema</span></label>
+        <label class="opt"><input type="radio" name="q20" value="D" /><span>D) Evitar qualquer mudança de requisitos</span></label>
+        <label class="opt"><input type="radio" name="q20" value="E" /><span>E) Substituir documentação por velocidade</span></label>
+      </fieldset>
+      <div class="feedback"></div>
+    </article>
+
+  </main>
+
+  <footer>
+    Dica: salve como arquivo .html (ex.: quiz-cap1.html) e abra no navegador.
+  </footer>
+
+  <script>
+    const gradeBtn = document.getElementById('gradeBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const questions = Array.from(document.querySelectorAll('.question'));
+    const resultBox = document.getElementById('resultBox');
+    const resultText = document.getElementById('resultText');
+    const statFacil = document.getElementById('statFacil');
+    const statMedio = document.getElementById('statMedio');
+    const statDificil = document.getElementById('statDificil');
+    const statBranco = document.getElementById('statBranco');
+
+    function clearMarksAndFeedback() {
+      questions.forEach(q => {
+        q.classList.remove('correct', 'incorrect');
+        const fb = q.querySelector('.feedback');
+        fb.style.display = 'none';
+        fb.textContent = '';
+      });
+    }
+
+    function getCheckedValue(qId) {
+      const checked = document.querySelector(`input[name="${qId}"]:checked`);
+      return checked ? checked.value : null;
+    }
+
+    function grade() {
+      clearMarksAndFeedback();
+
+      let total = 0, correct = 0, blank = 0;
+      const per = {
+        facil: { total: 0, correct: 0, blank: 0 },
+        medio: { total: 0, correct: 0, blank: 0 },
+        dificil: { total: 0, correct: 0, blank: 0 }
+      };
+
+      questions.forEach(q => {
+        const diff = q.getAttribute('data-difficulty');
+        const ans = q.getAttribute('data-answer');
+        const qId = q.id;
+
+        const chosen = getCheckedValue(qId);
+        const fb = q.querySelector('.feedback');
+
+        total++;
+        per[diff].total++;
+
+        fb.style.display = 'block';
+
+        if (!chosen) {
+          blank++;
+          per[diff].blank++;
+          q.classList.add('incorrect');
+          fb.innerHTML = `<strong>Você deixou em branco.</strong> Resposta correta: <strong>${ans}</strong>.`;
+          return;
+        }
+
+        if (chosen === ans) {
+          correct++;
+          per[diff].correct++;
+          q.classList.add('correct');
+          fb.innerHTML = `<strong>Parabéns, você acertou!</strong>`;
+        } else {
+          q.classList.add('incorrect');
+          fb.innerHTML = `<strong>Você errou.</strong> Você marcou: <strong>${chosen}</strong>. Resposta correta: <strong>${ans}</strong>.`;
+        }
+      });
+
+      const percent = Math.round((correct / total) * 100);
+
+      resultText.innerHTML = `<b>${correct}</b> de <b>${total}</b> corretas (<b>${percent}%</b>)`;
+      statFacil.innerHTML = `<b>Fácil</b><br>Corretas: ${per.facil.correct}/${per.facil.total} • Em branco: ${per.facil.blank}`;
+      statMedio.innerHTML = `<b>Médio</b><br>Corretas: ${per.medio.correct}/${per.medio.total} • Em branco: ${per.medio.blank}`;
+      statDificil.innerHTML = `<b>Difícil</b><br>Corretas: ${per.dificil.correct}/${per.dificil.total} • Em branco: ${per.dificil.blank}`;
+      statBranco.innerHTML = `<b>Em branco</b><br>${blank} questão(ões) sem resposta`;
+
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetAll() {
+      document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+      clearMarksAndFeedback();
+      resultBox.style.display = 'none';
+    }
+
+    gradeBtn.addEventListener('click', grade);
+    resetBtn.addEventListener('click', resetAll);
+
+    // init
+    clearMarksAndFeedback();
+  </script>
+</body>
+</html>
