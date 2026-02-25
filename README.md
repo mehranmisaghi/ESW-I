@@ -22,7 +22,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 [Aula Inaugural (24/02/2026 - 24/02/2026)](intro.md)
   - Ementa, metodologia, formas de avaliação
   
-[Conceitos Básicos (26/02/2026 - 26/02/2026)](basico.md)
+[Conceitos Básicos (26/02/2026 - 26/02/2026)](intro.md)
   - Conceitos Básicos
   - Principais áreas de atuação
 
