@@ -187,12 +187,11 @@ SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
 ## [Teste os seus conhecimentos](https://mehranmisaghi.github.io/ESW-I/quiz-papel.html)
 
-## Slides da aula
-[Primeira Semana](https://www.canva.com/design/DAHB4ZAigxc/lgjWJyY86zBlLOh0KbjfwA/edit?utm_content=DAHB4ZAigxc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Primeiro Capítulo do livro
 Você pode acessar o primeiro capítulo para o estudo:
 [Capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+
 ## Alguns vídeos
 - [Engenheiro de Software ou Programador?](https://youtu.be/Gm6U-AxXEQ0?si=kFY-UnvOMd6fdANa)
 - [O que é Engenheiro de Software Realmente?](https://youtu.be/WnlpVDNNLOk?si=qVtShXdv87QhGLwT)
