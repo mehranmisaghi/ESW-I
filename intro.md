@@ -185,15 +185,18 @@ PRESSMAN, R. S.; MAXIM, B. R. Engenharia de Software: uma abordagem profissional
 SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
 
-## [Teste os seus conhecimentos](https://mehranmisaghi.github.io/ESW-I/quiz-papel.html)
+### [Teste os seus conhecimentos](https://mehranmisaghi.github.io/ESW-I/quiz-papel.html)
 
 
 ## Primeiro Capítulo do livro
 Você pode acessar o primeiro capítulo para o estudo:
-[Capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+[Capítulo 1 do livro Pressman](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+
+### [Teste os seus conhecimentos a respeito do capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/cap1.html)
+
 
 ## Alguns vídeos
 - [Engenheiro de Software ou Programador?](https://youtu.be/Gm6U-AxXEQ0?si=kFY-UnvOMd6fdANa)
 - [O que é Engenheiro de Software Realmente?](https://youtu.be/WnlpVDNNLOk?si=qVtShXdv87QhGLwT)
 
-## **Não esqueça de estudar o primeiro capítulo e refletir sobre as perguntas para próxima aula. Veja também os vídeos mencionados**
+## **Não esqueça de estudar o primeiro capítulo e refletir sobre as perguntas para próxima aula e teste seus conhecimentos sobre capítulo 1.  Veja também os vídeos mencionados**
