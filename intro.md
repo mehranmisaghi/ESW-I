@@ -182,9 +182,6 @@ Em um cenário de constante transformação tecnológica, aplicar métodos estru
 
 PRESSMAN, R. S.; MAXIM, B. R. Engenharia de Software: uma abordagem profissional. 9. ed. Porto Alegre: AMGH, 2021.
 
-SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
-
-
 ### [Teste os seus conhecimentos](https://mehranmisaghi.github.io/ESW-I/quiz-papel.html)
 
 
@@ -192,7 +189,7 @@ SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 Você pode acessar o primeiro capítulo para o estudo:
 [Capítulo 1 do livro Pressman](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf) (funciona o link)
 
-### [Teste os seus conhecimentos a respeito do capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/cap1.html)
+### [Teste os seus conhecimentos a respeito do capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/cap1.html) <span style="color:red">Novo</span>
 
 
 ## Alguns vídeos
