@@ -190,7 +190,7 @@ SOMMERVILLE, I. Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
 ## Primeiro Capítulo do livro
 Você pode acessar o primeiro capítulo para o estudo:
-[Capítulo 1 do livro Pressman](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf)
+[Capítulo 1 do livro Pressman](https://mehranmisaghi.github.io/ESW-I/materiais/pressman-cap1.pdf) (funciona o link)
 
 ### [Teste os seus conhecimentos a respeito do capítulo 1](https://mehranmisaghi.github.io/ESW-I/materiais/cap1.html)
 
