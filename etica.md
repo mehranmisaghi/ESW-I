@@ -182,6 +182,3 @@ ACM. (2018). *ACM Code of Ethics and Professional Conduct*. Association for Comp
 
 IEEE. (2020). *IEEE Code of Ethics*. Institute of Electrical and Electronics Engineers. Disponível em: https://www.ieee.org/about/corporate/governance/p7-8.html
 
-## Teste os seus conhecimentos em Ética
-
-[Quiz de teste de ética](https://mehranmisaghi.github.io/ESW-I/quiz-etica.html)
