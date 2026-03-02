@@ -3,8 +3,17 @@ title: 'Ética na Engenharia de Software'
 description: 'Ética da Engenharia de Software conforme IEEE e ACM'
 permalink: etica.md
 ---
+## Semana 2 - Ética na Engenharia de Software
 
+## Materiais para Estudo
+
+### Slides da aula
+[Slides sobre ética]()
+
+### Capítulo 1 - Sommerville
+[Cap1 de Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/Cap1-sommerville.pdf)
 # Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
+---
 
 Texto gerado com auxílio de IA
 
