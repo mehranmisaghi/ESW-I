@@ -7,13 +7,12 @@ permalink: etica.md
 
 ## Materiais para Estudo
 
-### Slides da aula
-[Slides sobre ética]()
-
+[Slides sobre ética](https://www.canva.com/design/DAHC0rDtZyc/KmtLKPwSlXUyBpltWcJUwQ/edit?utm_content=DAHC0rDtZyc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 [Cap1 de Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/Cap1-sommerville.pdf)
-# Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
 ---
+## Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
+
 
 Texto gerado com auxílio de IA
 
