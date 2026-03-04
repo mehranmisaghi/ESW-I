@@ -15,8 +15,9 @@ permalink: etica.md
 - Estude os casos apresentados no capítulo 1, conforme consta nos slides e faça um resumo.
 - Apresentação será na sala de aula e no quadro.
 
+---
 
-## Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
+### Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
 
 
 Texto gerado com auxílio de IA
