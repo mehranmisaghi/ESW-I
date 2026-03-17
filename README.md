@@ -32,14 +32,15 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
   - Estudos de Casos 
   
 [Processo de Software I (10/03/2026 - 12/03/2026)](processos.md)
-  - Modelos de processos de Software (Cascata e Incremental)
-  - Prototipação
+  - Modelos de processos de Software (Cascata e Incremental) (12/03)
+  - Prototipação (17/03)
 
 [Processo de Software II (17/03/2026 - 26/03/2026)](processos.md)
-  - Rapid Appliction Development (RAD)
-  - Rational Unify Process (RUP)
-  - Tecnologia em camadas
-  - Apresentação dos modelos 
+  - Rapid Appliction Development (RAD) (17/03)
+  - Rational Unify Process (RUP) (ainda não foi visto)
+  - Tecnologia em camadas (ainda não foi visto)
+  - **Preparação das apresentações (19/03)**
+  - **Apresentação dos modelos (dia 24/03)**
 
 ## Prova I (31/03/2026)
 
