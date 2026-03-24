@@ -8,6 +8,12 @@ permalink: Processos.md
 ## Materiais para Estudo (12 e 17/03/2026)
 
 - [Slides - Processos (I)](https://www.canva.com/design/DAHDW6zrrtY/x6MftD5eSdL8o2pVjrWdGQ/edit?utm_content=DAHDW6zrrtY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+---
+
+### Teste os seus conhecimentos 
+[Processos - Parte 1](https://mehranmisaghi.github.io/ESW-I/materiais/processosq1.html)
+
+---
 - [Slides - Processos (II)](https://www.canva.com/design/DAHDpalh6kY/Wt8kh2yFPWo5IpQ5ShfMZw/edit?utm_content=DAHDpalh6kY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [Cap2 de Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/Cap2-sommerville.pdf)
 
@@ -27,6 +33,11 @@ permalink: Processos.md
 - [Apresentação Reúso](https://forms.gle/JmmBdzrEvBcfeTcK8) 
 
 ---
+**Apresentações realizadas (24/03)**
 
-## Teste os seus conhecimentos 
-[Processos - Parte 1](https://mehranmisaghi.github.io/ESW-I/materiais/processosq1.html)
+- [Apresentação Incremental](https://forms.gle/Xm3sg8uNkZxzqd5RA) 
+- [Apresentação Cascata](https://forms.gle/8bWQAymNxC9ye9RQ6) 
+- [Apresentação RAD](https://forms.gle/Hnm1JZsAATQAxN9f9) *não foi apresentado*
+- [Apresentação Reúso](https://forms.gle/JmmBdzrEvBcfeTcK8) 
+
+---
