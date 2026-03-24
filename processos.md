@@ -19,7 +19,7 @@ permalink: Processos.md
 - _Preparar as apresentações (19/03, dia destinado para que os grupos de até 5 componentes escolhem um tema para apresentar no dia 24/03)_
 - **Apresentar os modelos, _conforme consta nos slides_ (24/03)**
 ---
-- **Avaliação das apresentações (24/03)**
+**Avaliação das apresentações (24/03)**
 
 - [Apresentação Incremental](https://forms.gle/Xm3sg8uNkZxzqd5RA) 
 - [Apresentação Cascata](https://forms.gle/8bWQAymNxC9ye9RQ6) 
