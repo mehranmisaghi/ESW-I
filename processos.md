@@ -36,8 +36,8 @@ permalink: Processos.md
 **Apresentações realizadas (24/03)**
 
 - [Apresentação Incremental](https://www.canva.com/design/DAHEtmxeAx8/qz7q2zsl2XC2fHwvH6O86g/edit?utm_content=DAHEtmxeAx8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
-- [Apresentação Cascata](hhttps://docs.google.com/presentation/d/1IYx21J34gGxWKPGaf-704Fzw5HB4eV8wRwf3eJkG4Ds/edit?usp=sharing) 
-- [Apresentação RAD]() *a ser apresentado no dia 26/03*
+- [Apresentação Cascata](https://docs.google.com/presentation/d/1IYx21J34gGxWKPGaf-704Fzw5HB4eV8wRwf3eJkG4Ds/edit?usp=sharing) 
+- [Apresentação RAD](11) *a ser apresentado no dia 26/03*
 - [Apresentação Reúso](https://docs.google.com/presentation/d/1eX_H7y5uzLyP2VRoJp5BWAEbhPb_gmLNAdXB2Rgd4lw/edit?usp=sharing) 
 
 ---
