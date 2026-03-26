@@ -29,7 +29,7 @@ permalink: Processos.md
 
 - [Apresentação Incremental](https://forms.gle/Xm3sg8uNkZxzqd5RA) 
 - [Apresentação Cascata](https://forms.gle/8bWQAymNxC9ye9RQ6) 
-- [Apresentação RAD](https://forms.gle/Hnm1JZsAATQAxN9f9) *não foi apresentado*
+- **[Apresentação RAD](https://forms.gle/UJREniUUKFmiGxPm8)** 
 - [Apresentação Reúso](https://forms.gle/JmmBdzrEvBcfeTcK8) 
 
 ---
