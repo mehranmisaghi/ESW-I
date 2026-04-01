@@ -150,5 +150,5 @@ Os métodos ágeis representam uma abordagem flexível e iterativa para o desenv
 Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos grandes exige adaptações e integração com práticas mais estruturadas.
 ---
 ## Bora trabalhar!
-- [Teste os seus conhecimentos!](materiais/qageis1.html)
+- [Teste os seus conhecimentos!](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
 
