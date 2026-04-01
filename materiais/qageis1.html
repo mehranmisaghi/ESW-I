@@ -1,1 +1,88 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Quiz - Métodos Ágeis</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+button { margin-top: 20px; padding: 10px; }
+.correto { color: green; }
+.errado { color: red; }
+</style>
+</head>
+<body>
+
+<h1>Quiz - Métodos Ágeis</h1>
+
+<form id="quiz">
+
+<!-- QUESTÕES -->
+<script>
+const perguntas = [
+["Qual é o principal objetivo dos métodos ágeis?", "A", "Documentação extensa", "B", "Entrega rápida de software", "C", "Redução de custos apenas", "D", "Eliminar testes"],
+["O que o Manifesto Ágil valoriza mais?", "A", "Processos", "B", "Ferramentas", "C", "Indivíduos e interações", "D", "Contratos"],
+["O Scrum é:", "A", "Linguagem de programação", "B", "Método ágil", "C", "Banco de dados", "D", "Sistema operacional"],
+["Sprint é:", "A", "Documento técnico", "B", "Iteração de desenvolvimento", "C", "Tipo de teste", "D", "Bug"],
+["O backlog contém:", "A", "Erros", "B", "Tarefas priorizadas", "C", "Código", "D", "Testes"],
+["Programação em pares envolve:", "A", "Um programador", "B", "Dois programadores juntos", "C", "Máquina virtual", "D", "Banco de dados"],
+["Refatoração significa:", "A", "Apagar código", "B", "Melhorar código existente", "C", "Testar código", "D", "Documentar código"],
+["Test-first significa:", "A", "Testar depois", "B", "Testar antes de codificar", "C", "Ignorar testes", "D", "Testar apenas no final"],
+["Quem define prioridades no Scrum?", "A", "Desenvolvedor", "B", "Scrum Master", "C", "Product Owner", "D", "Cliente externo"],
+["Métodos ágeis são melhores para:", "A", "Sistemas rígidos", "B", "Ambientes dinâmicos", "C", "Sistemas antigos", "D", "Apenas hardware"],
+["Um problema dos métodos ágeis é:", "A", "Muito código", "B", "Falta de documentação", "C", "Excesso de testes", "D", "Pouca interação"],
+["Entrega incremental significa:", "A", "Entregar tudo no final", "B", "Entregar partes do sistema", "C", "Não entregar", "D", "Entregar código incompleto"],
+["Métodos ágeis enfatizam:", "A", "Processos rígidos", "B", "Flexibilidade", "C", "Documentação extensa", "D", "Planejamento fixo"],
+["Histórias do usuário representam:", "A", "Código", "B", "Requisitos", "C", "Testes", "D", "Bugs"],
+["Métodos ágeis podem falhar quando:", "A", "Há cliente envolvido", "B", "Equipes pequenas", "C", "Sistemas grandes e complexos", "D", "Boa comunicação"],
+["A escalabilidade ágil exige:", "A", "Menos planejamento", "B", "Integração com métodos tradicionais", "C", "Eliminar documentação", "D", "Reduzir equipes"],
+["Um desafio da manutenção ágil é:", "A", "Código simples", "B", "Falta de requisitos claros", "C", "Muitos testes", "D", "Equipe estável"],
+["O Scrum funciona melhor quando:", "A", "Não há cliente", "B", "Há interação constante", "C", "Pouca comunicação", "D", "Sem planejamento"],
+["Métodos ágeis priorizam:", "A", "Previsão total", "B", "Adaptação", "C", "Rigidez", "D", "Controle absoluto"],
+["Em grandes sistemas, métodos ágeis devem:", "A", "Ser usados isoladamente", "B", "Ser combinados com métodos tradicionais", "C", "Ser evitados", "D", "Ignorar documentação"]
+];
+
+const respostas = ["B","C","B","B","B","B","B","B","C","B","B","B","B","B","C","B","B","B","B","B"];
+
+for (let i = 0; i < perguntas.length; i++) {
+    document.write("<p>" + (i+1) + ". " + perguntas[i][0] + "<br>");
+    for (let j = 1; j < perguntas[i].length; j += 2) {
+        document.write('<input type="radio" name="q'+i+'" value="'+perguntas[i][j]+'"> ' + perguntas[i][j] + ") " + perguntas[i][j+1] + "<br>");
+    }
+    document.write('<span id="r'+i+'"></span></p>');
+}
+</script>
+
+<button type="button" onclick="corrigir()">Corrigir</button>
+
+</form>
+
+<script>
+function corrigir() {
+    let acertos = 0;
+
+    for (let i = 0; i < respostas.length; i++) {
+        let selecionada = document.querySelector('input[name="q'+i+'"]:checked');
+        let resultado = document.getElementById("r"+i);
+
+        if (!selecionada) {
+            resultado.innerHTML = " ⚠️ Não respondida";
+            resultado.className = "errado";
+            continue;
+        }
+
+        if (selecionada.value === respostas[i]) {
+            resultado.innerHTML = " ✅ Correto";
+            resultado.className = "correto";
+            acertos++;
+        } else {
+            resultado.innerHTML = " ❌ Errado (Correta: " + respostas[i] + ")";
+            resultado.className = "errado";
+        }
+    }
+
+    alert("Você acertou " + acertos + " de 20 questões.");
+}
+</script>
+
+</body>
+</html>
