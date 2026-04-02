@@ -3,14 +3,19 @@ title: 'Métodos Ágeis na Engenharia de Software'
 description: 'Métodos Ágeis (I)'
 permalink: ageis.md
 ---
-## Semana 5 - Métodos ágeis (I)
+## Semana 5 - Métodos ágeis (I) (02/04)
 
-### Material para estudar
+### Material para estudar (02/04)
 
 - [Slides de Métodos Ágeis (I)](https://canva.link/2bgsf0nafqaopjq)
 - [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
 ---
-# Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software 
+### Trabalho (Apresentar no dia 07/04) - Trabalho em dupla
+
+- [Atividade especificada no slide 10)](https://canva.link/2bgsf0nafqaopjq)
+---
+
+# Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (07/04, 09/04)
 Este material foi escrito com auxílio de IA e foi revisado.
 
 ## 1. Situação atual do mercado
@@ -149,6 +154,6 @@ Os métodos ágeis representam uma abordagem flexível e iterativa para o desenv
 
 Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos grandes exige adaptações e integração com práticas mais estruturadas.
 ---
-## Bora trabalhar!
+## Bora trabalhar! (09/04)
 - [Teste os seus conhecimentos!](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
 
