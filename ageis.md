@@ -14,6 +14,10 @@ permalink: ageis.md
 
 - [Atividade especificada no slide 10](https://canva.link/2bgsf0nafqaopjq)
 ---
+### Aula e material para estudar (07/04)
+
+- [Slides de Métodos Ágeis (II)](https://canva.link/sv6v1s7d2tqrx6b)
+- [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
 
 # Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (07/04, 09/04)
 Este material foi escrito com auxílio de IA e foi revisado.
