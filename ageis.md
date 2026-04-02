@@ -19,7 +19,7 @@ permalink: ageis.md
 - [Slides de Métodos Ágeis (II)](https://canva.link/sv6v1s7d2tqrx6b)
 - [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
 
-# Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (07/04, 09/04)
+# Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (09/04)
 Este material foi escrito com auxílio de IA e foi revisado.
 
 ## 1. Situação atual do mercado
@@ -158,6 +158,6 @@ Os métodos ágeis representam uma abordagem flexível e iterativa para o desenv
 
 Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos grandes exige adaptações e integração com práticas mais estruturadas.
 ---
-## Bora trabalhar! (09/04)
+## Bora trabalhar! (16/04)
 - [Teste os seus conhecimentos!](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
 
