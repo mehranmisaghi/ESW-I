@@ -46,6 +46,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 
 [Métodos Ágeis no Desenvolvimento de Software  (02/04/2026 - 30/04/2026)](ageis.md)
   - [Surgimento de métodos ágeis](ageis.md)
+  - **Apresentação de Manifesto Ágil (07/04)**
   - [manifesto ágil](ageis.md)
   - [Extreme Programming (XP)](ageis.md)
   - [Scrum](ageis.md)
