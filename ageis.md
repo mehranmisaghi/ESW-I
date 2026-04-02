@@ -12,7 +12,7 @@ permalink: ageis.md
 ---
 ### Trabalho (Apresentar no dia 07/04) - Trabalho em dupla
 
-- [Atividade especificada no slide 10)](https://canva.link/2bgsf0nafqaopjq)
+- [Atividade especificada no slide 10](https://canva.link/2bgsf0nafqaopjq)
 ---
 
 # Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (07/04, 09/04)
