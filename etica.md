@@ -5,20 +5,21 @@ permalink: etica.md
 ---
 ## Semana 2 - Ética na Engenharia de Software
 
-## Materiais para Estudo 
+## Materiais para Estudo
 
 - [Slides sobre ética](https://www.canva.com/design/DAHC0rDtZyc/KmtLKPwSlXUyBpltWcJUwQ/edit?utm_content=DAHC0rDtZyc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
 - [Cap1 de Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/Cap1-sommerville.pdf)
+
 ---
+
 ## Trabalhos desta semana
+
 - Estude os casos apresentados no capítulo 1, conforme consta nos slides e faça um resumo.
 - Apresentação será na sala de aula e no quadro.
 
 ---
 
 ### Código de Ética na Engenharia de Software: Fundamentos, Responsabilidades e Estudos de Caso
-
 
 Texto gerado com auxílio de IA
 
