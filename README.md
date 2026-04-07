@@ -57,7 +57,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
   
 ## Prova II (26/05/2026)
 
-[Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios.md) 
+[Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios.md)
 
 [Preparação dos Seminários (02/06/2026 - 11/06/2026)](seminarios.md)
 
