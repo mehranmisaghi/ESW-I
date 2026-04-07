@@ -53,7 +53,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
   - [Kanban](ageis.mdmd)
   - Trello
  
-[Engenharia de Rquisitos (05/05/2026 - 21/05/2026)](requistos.md)
+[Engenharia de Requisitos (05/05/2026 - 21/05/2026)](requistos.md)
   
 ## Prova II (26/05/2026)
 
