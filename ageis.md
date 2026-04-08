@@ -19,7 +19,14 @@ permalink: ageis.md
 - [Slides de Métodos Ágeis (II)](https://canva.link/sv6v1s7d2tqrx6b)
 - [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
 
-# Um resumo do Capítulo 3 — Desenvolvimento Ágil de Software (09/04)
+## Aula e material para estudar (09/04)
+
+- [Slides de Métodos Ágeis (III)](https://canva.link/9qo4fd9mi7egl6m)
+- [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
+
+
+# Um resumo do Capítulo 3 (Sommerville) — Desenvolvimento Ágil de Software (09/04)
+
 Este material foi escrito com auxílio de IA e foi revisado.
 
 ## 1. Situação atual do mercado
