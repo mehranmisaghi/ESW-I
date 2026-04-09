@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Engenharia de Software - Capítulo 2</title>
+
+<style>
+body { font-family: Arial; margin: 30px; background:#f4f4f4; }
+.container { background:white; padding:20px; border-radius:10px; }
+.questao { margin-bottom:15px; padding:10px; border-left:5px solid #ccc; }
+.correta { background:#d4edda; border-left:5px solid green; }
+.errada { background:#f8d7da; border-left:5px solid red; }
+button { padding:10px; }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>Quiz - Engenharia de Software (Requisitos)</h2>
+
+<form id="quiz"></form>
+
+<button onclick="corrigir()">Finalizar</button>
+<h3 id="resultado"></h3>
+</div>
+
+<script>
+
+const perguntas = [
+["Requisitos de software definem:", "Código", "Banco de dados", "Necessidades do sistema", "Hardware", "Rede", "c"],
+["Stakeholders são:", "Usuários apenas", "Clientes apenas", "Interessados no sistema", "Programadores", "Testadores", "c"],
+["Requisitos funcionais descrevem:", "Desempenho", "Segurança", "Funcionalidades", "Interface", "Infraestrutura", "c"],
+["Requisitos não funcionais tratam de:", "Funções", "Qualidade", "Código", "Usuários", "Testes", "b"],
+["Exemplo de requisito não funcional:", "Login", "Cadastro", "Tempo de resposta", "Busca", "Salvar", "c"],
+["Elicitação de requisitos é:", "Implementar", "Testar", "Levantar requisitos", "Deploy", "Codificar", "c"],
+["Entrevistas servem para:", "Codificar", "Testar", "Coletar requisitos", "Implantar", "Monitorar", "c"],
+["Casos de uso representam:", "Banco", "Infraestrutura", "Interações usuário-sistema", "Código", "Rede", "c"],
+["User stories são:", "Testes", "Histórias do usuário", "Diagramas", "Código", "Logs", "b"],
+["Validação de requisitos garante:", "Execução", "Qualidade do código", "Requisitos corretos", "Deploy", "Backup", "c"],
+["Requisitos ambíguos são:", "Claros", "Confusos", "Corretos", "Testáveis", "Simples", "b"],
+["Prototipação ajuda a:", "Testar rede", "Visualizar sistema", "Codificar", "Deploy", "Monitorar", "b"],
+["Backlog é:", "Código", "Lista de requisitos", "Banco", "Servidor", "API", "b"],
+["Priorizar requisitos significa:", "Remover", "Ordenar importância", "Codificar", "Testar", "Deploy", "b"],
+["Requisitos devem ser:", "Ambíguos", "Testáveis", "Complexos", "Ocultos", "Longos", "b"],
+["Documento de requisitos é:", "Código", "Relatório de requisitos", "Banco", "Servidor", "API", "b"],
+["Stakeholder interno:", "Cliente", "Usuário externo", "Equipe", "Fornecedor", "Internet", "c"],
+["Stakeholder externo:", "Dev", "Tester", "Cliente", "Equipe", "Sistema", "c"],
+["Requisitos inconsistentes são:", "Compatíveis", "Conflitantes", "Claros", "Simples", "Testáveis", "b"],
+["Análise de requisitos envolve:", "Codificar", "Entender requisitos", "Deploy", "Testar", "Monitorar", "b"],
+["Modelagem ajuda a:", "Executar", "Visualizar sistema", "Codificar", "Deploy", "Backup", "b"],
+["Requisitos completos são:", "Parciais", "Incompletos", "Totalmente definidos", "Confusos", "Ambíguos", "c"],
+["Requisitos verificáveis são:", "Testáveis", "Confusos", "Complexos", "Ocultos", "Longos", "a"],
+["Escopo define:", "Código", "Limites do sistema", "Banco", "Servidor", "Rede", "b"],
+["Mudanças em requisitos são:", "Raras", "Impossíveis", "Comuns", "Ilegais", "Fixas", "c"],
+["Gerenciamento de requisitos trata de:", "Código", "Controle de mudanças", "Deploy", "Teste", "Execução", "b"],
+["Requisitos derivados são:", "Originais", "Gerados a partir de outros", "Inválidos", "Confusos", "Simples", "b"],
+["Requisitos implícitos são:", "Explícitos", "Não documentados", "Testáveis", "Claramente definidos", "Visíveis", "b"],
+["Validação responde:", "Como implementar", "Se está correto", "Como testar", "Como rodar", "Como codificar", "b"],
+["Verificação responde:", "Se atende necessidade", "Se está bem especificado", "Se roda", "Se compila", "Se executa", "b"]
+];
+
+const form = document.getElementById("quiz");
+
+perguntas.forEach((q, i) => {
+    let html = `<div class="questao" id="q${i}">
+    <p>${i+1}. ${q[0]}</p>`;
+    ["a","b","c","d","e"].forEach((alt, j) => {
+        html += `<input type="radio" name="q${i}" value="${alt}"> ${q[j+1]}<br>`;
+    });
+    html += `</div>`;
+    form.innerHTML += html;
+});
+
+function corrigir() {
+    let acertos = 0;
+
+    perguntas.forEach((q, i) => {
+        let correta = q[6];
+        let sel = document.querySelector(`input[name="q${i}"]:checked`);
+        let div = document.getElementById(`q${i}`);
+
+        if (sel && sel.value === correta) {
+            acertos++;
+            div.classList.add("correta");
+            div.innerHTML += "<p>✅ Correto</p>";
+        } else {
+            div.classList.add("errada");
+            div.innerHTML += `<p>❌ Correta: ${correta.toUpperCase()}</p>`;
+        }
+    });
+
+    document.getElementById("resultado").innerText =
+        "Resultado: " + acertos + " / 30";
+}
+
+</script>
+
+</body>
+</html>

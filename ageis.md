@@ -23,6 +23,7 @@ permalink: ageis.md
 
 - [Slides de Métodos Ágeis (III)](https://canva.link/9qo4fd9mi7egl6m)
 - [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
+- [Capítulo 2 - Engenharia de Software Moderna](https://engsoftmoderna.info/cap2.html)
 
 
 # Um resumo do Capítulo 3 (Sommerville) — Desenvolvimento Ágil de Software (09/04)
@@ -166,5 +167,7 @@ Os métodos ágeis representam uma abordagem flexível e iterativa para o desenv
 Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos grandes exige adaptações e integração com práticas mais estruturadas.
 ---
 ## Bora trabalhar! (16/04)
-- [Teste os seus conhecimentos!](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
+
+- [Teste os seus conhecimentos! sobre capítulo 3 - Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
+- [Teste os seus conhecimentos sobre capítulo 2 - Engenharia de Sofware Moderna](https://mehranmisaghi.github.io/ESW-I/materiais/cap2ESW.html)
 
