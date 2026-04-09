@@ -169,5 +169,5 @@ Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos
 ## Bora trabalhar! (16/04)
 
 - [Teste os seus conhecimentos! sobre capítulo 3 - Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
-- [Teste os seus conhecimentos sobre capítulo 2 - Engenharia de Sofware Moderna](https://mehranmisaghi.github.io/ESW-I/materiais/cap2ESW.html)
+- [Teste os seus conhecimentos sobre capítulo 2 - Engenharia de Software Moderna](https://mehranmisaghi.github.io/ESW-I/materiais/cap2ESW.html)
 
