@@ -25,6 +25,10 @@ permalink: ageis.md
 - [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
 - [Capítulo 2 - Engenharia de Software Moderna](https://engsoftmoderna.info/cap2.html)
 
+## Aula e material para estudar (16/04)
+
+- [Capítulo 2 - Engenharia de Software Moderna](https://engsoftmoderna.info/cap2.html)
+- [Slides do Capítulo 2 - Engenharia de Software Moderna](https://docs.google.com/presentation/d/1lUlZ97iXmMJobH7ULTfAY-qsjS8Mca8devYfpQad1ps/edit?slide=id.g4ffa9ac22f_0_0#slide=id.g4ffa9ac22f_0_0)
 
 # Um resumo do Capítulo 3 (Sommerville) — Desenvolvimento Ágil de Software (09/04)
 
