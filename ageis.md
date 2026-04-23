@@ -186,6 +186,7 @@ Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos
 - Escolher um Trello para apresentar
 ---
 
-## Apresentações Trello (28/04)
+## O que faremos no dia 28/04?
 
 - Apresentar o Trello escolhido (dupla)
+- Verificar os códigos desenvolvidos (finalmente)
