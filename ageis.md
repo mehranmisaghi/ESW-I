@@ -176,4 +176,16 @@ Embora sejam altamente eficazes em muitos contextos, sua aplicação em projetos
 
 - [Teste os seus conhecimentos! sobre capítulo 3 - Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/qageis1.html)
 - [Teste os seus conhecimentos sobre capítulo 2 - Engenharia de Software Moderna](https://mehranmisaghi.github.io/ESW-I/materiais/cap2ESW.html)
+---
 
+## Kanban e Trello (23/04)
+
+- Fazer o sistema de biblioteca no Trello (individual)
+- Comparar o sistema de biblioteca com o seu colegal (dupla)
+- Compartilhar com colega o seu Trello
+- Escolher um Trello para apresentar
+---
+
+## Apresentações Trello (28/04)
+
+- Apresentar o Trello escolhido (dupla)
