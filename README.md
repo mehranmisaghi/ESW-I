@@ -61,6 +61,6 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 
 [Preparação dos Seminários (02/06/2026 - 11/06/2026)](seminarios.md)
 
-## Visita (16/06/2026)
+## Visita TOTOVS confirmado (23/06/2026)
   
 ## Apresentação de seminários (18/06/2026 - 30/06/2026)
