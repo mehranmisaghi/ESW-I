@@ -17,7 +17,7 @@ permalink: ageis.md
 ### Aula e material para estudar (07/04)
 
 - [Slides de Métodos Ágeis (II)](https://canva.link/sv6v1s7d2tqrx6b)
-- [Capítulo 3 - Sommerville](materiais/Cap3-sommerville.pdf)
+- [Capítulo 3 - Sommerville](https://mehranmisaghi.github.io/ESW-I/materiais/Cap3-sommerville.pdf)
 
 ## Aula e material para estudar (09/04)
 
