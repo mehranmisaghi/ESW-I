@@ -242,7 +242,9 @@ RN.<NNN> - <descrição da regra>.
 
 | Datas | Conteúdo |
 |---|---|
-| 28 e 29 | Kanban e Trello |
+| 28/04 | Kanban |
+| 30/04 | Palestra|
+| 05/05 | Ver Trello|
 | 05/05 a 21/05 | Engenharia de Requisitos |
 | 26/05 | Prova II |
 | 28/05 | Detalhamento dos temas e Seminários |
