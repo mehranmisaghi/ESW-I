@@ -100,6 +100,7 @@ Como <papel/tipo de usuário>, eu gostaria de <ação desejada>.
 | Professor | Empréstimos com prazo mais longo, sugerir/doar livros, devolver em outras bibliotecas |
 | Funcionário | Cadastrar usuários/livros, aplicar multas, enviar e-mails de cobrança |
 
+# Paramos no slide 21 (04/05)
 ### 5.2 Histórias Épicas
 
 Histórias maiores e mais complexas que podem (e devem) ser **decompostas em histórias menores**.
