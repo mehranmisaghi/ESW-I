@@ -3,7 +3,7 @@ title: 'Introdução a Engenharia de Software'
 description: 'Engenharia de Software - Semana 1'
 permalink: intro.md
 ---
-
+ok
 # Engenharia de Software - Semana 1
 
 ## Slides da aula
