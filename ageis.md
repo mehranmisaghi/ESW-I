@@ -1,6 +1,6 @@
 ---
-title: 'Métodos Ágeis na Engenharia de Software'
-description: 'Métodos Ágeis (I)'
+title: 'Métodos Ágeis'
+description: 'Métodos Ágeis na Engenharia de Software'
 permalink: ageis.md
 ---
 ## Semana 5 - Métodos ágeis (I) (02/04)
