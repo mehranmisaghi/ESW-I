@@ -255,3 +255,12 @@ RN.<NNN> - <descrição da regra>.
 
 ---
 
+## Bora exercitar em alguns cenários!
+> Nos cenários a seguir elobarem RF, RNF e RN.
+
+1. Sistema de E-commerce com Marketplace (cliente, vendedor, administrador)
+2. Sistema de Carros Autônomos (carro, cliente e um sistema centralizado)
+3. Sistema de Detecção de Fraudes Financeiras (cliente, banco, sistema)
+4. Sistema de Cidade Inteligente (para integrar trânsito, iluminação pública, segurança e transporte) (cidadão, prefeitura, operadoras e sensores IoT)
+5. Sistema de Monitoramento Inteligente de Plantação (umidade do solo, temperatura e nutrientes) (produtor, sistema IoT, técnico)
+6. Sistema de Supermercado para Condomínios
