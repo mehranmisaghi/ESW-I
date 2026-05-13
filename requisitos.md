@@ -255,7 +255,7 @@ RN.<NNN> - <descrição da regra>.
 
 ---
 
-## Bora exercitar em alguns cenários!
+## Bora exercitar em alguns cenários! (14/05)
 > Nos cenários a seguir elobarem RF, RNF e RN.
 
 1. Sistema de E-commerce com Marketplace (cliente, vendedor, administrador)
