@@ -273,7 +273,7 @@ RN.<NNN> - <descrição da regra>.
 ---
  ### Obserações sobre o trabalho:
 
- 1. As apresentações ocorrerão nos dias 19 e 21. Mas **todos os grupos deverão deixar prontas as suas apresentações para o dia 19**.
+ 1. As apresentações ocorrerão nos dias 19 e 21 de maio. Mas **todos os grupos deverão deixar prontas as suas apresentações para o dia 19 de maio**.
  2. O tempo de apresentação poderá ser até 30 minutos
  3. Os grupos poderão aprsentar o documento compartilhando e explicando o que cada membro fez ou fazer no quadro ou outras modalidades.
  4. Os grupos poderão desenvolver partes da aplicação para apresentar.
