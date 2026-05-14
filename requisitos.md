@@ -259,8 +259,21 @@ RN.<NNN> - <descrição da regra>.
 > Nos cenários a seguir elobarem RF, RNF e RN.
 
 1. Sistema de E-commerce com Marketplace (cliente, vendedor, administrador)
+  - Henrique, Tomas e Paulo
 2. Sistema de Carros Autônomos (carro, cliente e um sistema centralizado)
+ - Carlos, Felipe e Brunno
 3. Sistema de Detecção de Fraudes Financeiras (cliente, banco, sistema)
+ - Hugo, Vitor, Thiago e Arthur Israel
 4. Sistema de Cidade Inteligente (para integrar trânsito, iluminação pública, segurança e transporte) (cidadão, prefeitura, operadoras e sensores IoT)
+ - Leonardo, Haniero e Arthur Mendonça
 5. Sistema de Monitoramento Inteligente de Plantação (umidade do solo, temperatura e nutrientes) (produtor, sistema IoT, técnico)
+ - Luís e Jose
 6. Sistema de Supermercado para Condomínios
+ - Heloisa, Mirella, Guilherme, Kelvin e Maurício
+---
+ ### Obserações sobre o trabalho:
+
+ 1. As apresentações ocorrerão nos dias 19 e 21. Mas **todos os grupos deverão deixar prontas as suas apresentações para o dia 19**.
+ 2. O tempo de apresentação poderá ser até 30 minutos
+ 3. Os grupos poderão aprsentar o documento compartilhando e explicando o que cada membro fez ou fazer no quadro ou outras modalidades.
+ 4. Os grupos poderão desenvolver partes da aplicação para apresentar.
