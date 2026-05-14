@@ -271,7 +271,7 @@ RN.<NNN> - <descrição da regra>.
 6. Sistema de Supermercado para Condomínios
  - Heloisa, Mirella, Guilherme, Kelvin e Maurício
 ---
- ### Obserações sobre o trabalho:
+ ### Observações sobre o trabalho:
 
  1. As apresentações ocorrerão nos dias 19 e 21 de maio. Mas **todos os grupos deverão deixar prontas as suas apresentações para o dia 19 de maio**.
  2. O tempo de apresentação poderá ser até 30 minutos
