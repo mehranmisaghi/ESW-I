@@ -277,3 +277,4 @@ RN.<NNN> - <descrição da regra>.
  2. O tempo de apresentação poderá ser até 30 minutos
  3. Os grupos poderão aprsentar o documento compartilhando e explicando o que cada membro fez ou fazer no quadro ou outras modalidades.
  4. Os grupos poderão desenvolver partes da aplicação para apresentar.
+ 5. Caso o grupo tenha usado alguma ferramenta de **IA**, a mesma tem que ser especificada e fornecida *prompt utilizada*.
