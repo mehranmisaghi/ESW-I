@@ -55,7 +55,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
  
 [Engenharia de Requisitos (05/05/2026 - 21/05/2026)](requisitos.md)
   
-## Prova II (26/05/2026)
+## Prova II (02/06/2026 - Data nova)
 
 [Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios.md)
 
