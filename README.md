@@ -54,6 +54,7 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
   - Trello
  
 [Engenharia de Requisitos (05/05/2026 - 21/05/2026)](requisitos.md)
+[Um pouco sobre DevOps](devops.md)
   
 ## Prova II (02/06/2026 - Data nova)
 
