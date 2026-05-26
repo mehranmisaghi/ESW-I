@@ -4,7 +4,7 @@ description: 'DevOps'
 permalink: devops.md
 ---
 # Material para estudar estudar esta aula
-- [Capítulo 1 e 2 de Como se Faz DevOps?](https://mehran.github.io/ESW-I/materiais/devops12.pdf)
+- [Capítulo 1 e 2 de Como se Faz DevOps?](https://mehranmisaghi.github.io/ESW-I/materiais/devops12.pdf)
 - [Slides de aula](https://canva.link/44hokav7lo6nmos)
 ---
 
