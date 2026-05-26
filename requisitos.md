@@ -246,10 +246,10 @@ RN.<NNN> - <descrição da regra>.
 | 28/04 | Kanban |
 | 30/04 | Palestra|
 | 05/05 | Ver Trello|
-| 05/05 a 21/05 | Engenharia de Requisitos |
-| 26/05 | Prova II |
+| 05/05 a 26/05 | Engenharia de Requisitos |
 | 28/05 | Detalhamento dos temas e Seminários |
-| 02/06 a 11/06 | Preparação de Seminários |
+| 02/06 | Prova II |
+| 28/05 a 11/06 | Preparação de Seminários |
 | 18/06 a 30/06 | Apresentação de Seminários |
 | 23/06 | Visita TOTVS |
 
