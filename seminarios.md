@@ -16,3 +16,10 @@ permalink: seminarios.md
 --- 
 # Detalhamento de Seminários
 - [Detalhamento e orientações necessárias](https://canva.link/oicbpm0q93c46ce)
+
+## Grupos e Temas escolhidos
+
+ - Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos 
+ - Henrique, Paulo e Tomas - Métodos Ágeis
+ - Luis, José e Leonardo - Modelos e Processos
+ 
