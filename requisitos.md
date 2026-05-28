@@ -279,5 +279,5 @@ RN.<NNN> - <descrição da regra>.
  4. Os grupos poderão desenvolver partes da aplicação para apresentar.
  5. Caso o grupo tenha usado alguma ferramenta de **IA**, a mesma tem que ser especificada e fornecida *prompt utilizada*.
 ---
-## Próximna aula
+## Próxima aula
 - [Um pouco de DevOps](devops.md)
