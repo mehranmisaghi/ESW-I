@@ -22,4 +22,4 @@ permalink: seminarios.md
  - Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos 
  - Henrique, Paulo e Tomas - Métodos Ágeis
  - Luis, José e Leonardo - Modelos e Processos
- 
+ - Arthur Israel, Brunno, Carlos e Felipe - a definir
