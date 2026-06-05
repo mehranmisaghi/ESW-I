@@ -23,3 +23,4 @@ permalink: seminarios.md
  - Henrique, Paulo e Tomas - Métodos Ágeis
  - Luis, José e Leonardo - Modelos e Processos
  - Arthur Israel, Brunno, Carlos e Felipe - Métodos Ágeis
+ - Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software
