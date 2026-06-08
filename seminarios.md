@@ -24,3 +24,5 @@ permalink: seminarios.md
  - Luis, José e Leonardo - Modelos e Processos
  - Arthur Israel, Brunno, Carlos e Felipe - Métodos Ágeis
  - Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&letft_text=Visitantes&format=true&logo=github)
