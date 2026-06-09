@@ -66,3 +66,5 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 ## Visita TOTVS confirmado (23/06/2026)
   
 ## Apresentação de seminários (18/06/2026 - 30/06/2026)
+---
+![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/esw.visitor-badge&left_text=Visitantes&format=true&logo=github)
