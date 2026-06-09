@@ -43,6 +43,9 @@ permalink: seminarios.md
     - O que poderiam ter feito
 - Apresentar conclusão
 - Comentar sobre trabalhos futuros
+- Caso usou IA:
+    - Qual IA
+    - Prompt utilizado
 ---
 ```mermaid
 flowchart LR
@@ -54,6 +57,7 @@ A --> E[Caso de Implementacao]
 A --> F[Estudo de Caso]
 A --> G[Conclusao]
 A --> H[Trabalhos Futuros]
+A --> I[IA?]
 B --> B1[Envio por e-mail]
 C --> C1[Ate 30 minutos]
 D --> D1[Metodologia de estudo]
@@ -70,6 +74,8 @@ F --> F6[O que nao foi feito]
 F --> F7[O que poderia ser feito]
 G --> G1[Apresentar conclusao]
 H --> H1[Sugestoes futuras]
+I --> I1[Qual IA]
+I --> I2[Prompt utilizado]
 ```
 
 
