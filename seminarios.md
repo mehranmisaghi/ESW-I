@@ -43,8 +43,34 @@ permalink: seminarios.md
     - O que poderiam ter feito
 - Apresentar conclusão
 - Comentar sobre trabalhos futuros
+---
+```mermaid
+flowchart LR
 
-
+A[Apresentacao do Trabalho] --> B[Entrega]
+A --> C[Gestao do Tempo]
+A --> D[Preparacao]
+A --> E[Caso de Implementacao]
+A --> F[Estudo de Caso]
+A --> G[Conclusao]
+A --> H[Trabalhos Futuros]
+B --> B1[Envio por e-mail]
+C --> C1[Ate 30 minutos]
+D --> D1[Metodologia de estudo]
+D --> D2[Organizacao e planejamento]
+E --> E1[Vantagens]
+E --> E2[Desvantagens]
+E --> E3[Comparativo com outras ferramentas]
+F --> F1[Conceitos envolvidos]
+F --> F2[Objetivo]
+F --> F3[Cenario]
+F --> F4[Data]
+F --> F5[Resultados obtidos]
+F --> F6[O que nao foi feito]
+F --> F7[O que poderia ser feito]
+G --> G1[Apresentar conclusao]
+H --> H1[Sugestoes futuras]
+```
 
 
 ![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&left_text=Visitantes&format=true&logo=github)
