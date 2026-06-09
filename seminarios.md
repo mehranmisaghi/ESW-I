@@ -73,4 +73,4 @@ H --> H1[Sugestoes futuras]
 ```
 
 
-![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&right_text=Visitantes&format=true&logo=github)
+![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&left_text=Visitantes&format=true&logo=ifc)
