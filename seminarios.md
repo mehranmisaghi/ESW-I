@@ -11,7 +11,7 @@ permalink: seminarios.md
 | 02/06 | **Prova II**|
 | 28/05 a 11/06 | Preparação de Seminários |
 | 12/06 | **Limite de envio de material por e-mail** |
-| 18/06 a 30/06 | Apresentação de Seminários |
+| 16/06, 18/06 e 30/06 | Apresentação de Seminários |
 | 23/06 | Visita TOTVS |
 --- 
 # Detalhamento de Seminários
@@ -77,6 +77,14 @@ H --> H1[Sugestoes futuras]
 I --> I1[Qual IA]
 I --> I2[Prompt utilizado]
 ```
-
+## Apresentações no dia 16/06
+- Grupo 1
+- Grupo 2
+## Apresentações no dia 18/06
+- Grupo 1
+- Grupo 2
+## Apresentações no dia 30/06
+- Grupo 1
+- Grupo 2
 
 ![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&left_text=Visitantes&format=true&logo=github)
