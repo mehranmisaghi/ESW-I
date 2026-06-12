@@ -78,11 +78,11 @@ I --> I1[Qual IA]
 I --> I2[Prompt utilizado]
 ```
 ## Apresentações no dia 18/06
-- Grupo 1
-- Grupo 2
-- Grupo 3
+- Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos 
+- Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software
 ## Apresentações no dia 30/06
-- Grupo 1
-- Grupo 2
+- Luis, José e Leonardo - Modelos e Processos
+- Henrique, Paulo e Tomas - Métodos Ágeis
+- Arthur Israel, Brunno, Carlos e Felipe - Métodos Ágeis
 
 ![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&left_text=Visitantes&format=true&logo=github)
