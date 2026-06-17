@@ -81,7 +81,7 @@ I --> I2[Prompt utilizado]
 - Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos 
 - Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software
 ## Apresentações no dia 30/06
-- Luis, José e Leonardo - Modelos e Processos
+- [Luis, José e Leonardo - Modelos e Processos]()
 - Henrique, Paulo e Tomas - Métodos Ágeis
 - Arthur Israel, Brunno, Carlos e Felipe - Métodos Ágeis
 

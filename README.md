@@ -59,12 +59,12 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
   
 ## Prova II (02/06/2026 - Data nova)
 
-[Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios.md)
+[Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios/seminarios.md)
 
-[Preparação dos Seminários (02/06/2026 - 16/06/2026)](seminarios.md)
+[Preparação dos Seminários (02/06/2026 - 16/06/2026)](seminarios/seminarios.md)
 
 ## Visita TOTVS confirmado (23/06/2026)
   
-## Apresentação de seminários (18/06/2026 - 30/06/2026)
+[Apresentação de seminários (18/06/2026 - 30/06/2026)](seminarios/seminarios.md)
 ---
 ![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/esw.visitor-badge&left_text=Visitantes&format=true&logo=github)
