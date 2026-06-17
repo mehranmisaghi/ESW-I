@@ -79,10 +79,10 @@ I --> I2[Prompt utilizado]
 ```
 ## Apresentações no dia 18/06
 - Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos 
-- Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software
+- [Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software](https://mehranmisaghi.github.io/ESW-I/seminarios/etica.pdf)
 ## Apresentações no dia 30/06
-- [Luis, José e Leonardo - Modelos e Processos]()
-- Henrique, Paulo e Tomas - Métodos Ágeis
+- [Luis, José e Leonardo - Modelos e Processos](https://mehranmisaghi.github.io/ESW-I/seminarios/modelos.pdf)
+- [Henrique, Paulo e Tomas - Métodos Ágeis](https://canva.link/sotweou6djqq309)
 - Arthur Israel, Brunno, Carlos e Felipe - Métodos Ágeis
 
 ![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-1.visitor-badge&left_text=Visitantes&format=true&logo=github)
