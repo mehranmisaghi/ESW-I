@@ -78,8 +78,9 @@ I --> I1[Qual IA]
 I --> I2[Prompt utilizado]
 ```
 ## Apresentações no dia 18/06
-- [Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos](https://canva.link/ggo5uwr664fgsnd)
 - [Heloísa, Mirella, Guilherme e Maurício - Ética na Engenharia de Software](https://mehranmisaghi.github.io/ESW-I/seminarios/etica.pdf)
+- [Hugo, Vitor, Kelvin e Thiago - Modelos, Requisitos](https://canva.link/ggo5uwr664fgsnd)
+
 ## Apresentações no dia 30/06
 - [Luis, José e Leonardo - Modelos e Processos](https://mehranmisaghi.github.io/ESW-I/seminarios/modelos.pdf)
 - [Henrique, Paulo e Tomas - Métodos Ágeis](https://canva.link/sotweou6djqq309)
